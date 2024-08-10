@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel='stylesheet' href='./styles.css'>
+    
+</head>
+<body>
+    <div id="size-choosing-container">
+        <input type="number" min="2" max="100"
+        id="size-choosing" name="size-choosing"
+        placeholder="64">
+        <button id="size-button">Choose Size</button>
+    </div>
+    <div id="main-container">
+        <div id="sketch-container"></div>
+        <script src="./script.js" type="module"></script>
+        
+        <div id="color-container">
+        <div id="default-color">
+            <div class="color red"></div>
+            <div class="color orange"></div>
+            <div class="color yellow"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+            <div class="color indigo"></div>
+            <div class="color violet"></div>
+            <div class="color black"></div>
+            <div class="color white"></div>
+        </div>
+            
+            <div class="hex-container">Input Hex code:
+                <input type="text" id="hex-code" name="hex-code" placeholder="#000000">
+            <button id="submit-button">Choose Color
+                <!-- <span class="tooltip choose-color-text">
+                    Click this button for instant color use.
+                </span> -->
+            </button>
+            <button id="save-color-button">Save Color
+                <!-- <span class="tooltip save-color-text">
+                    Click this button to save the color to the container
+                </span> -->
+            </button>
+            </div>
+        </div>
+        
+        <div id="function-buttons">
+            <div id="erase-button">Erase All</div>
+            <div id="reverse-button">Reverse All</div>
+            
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -22,8 +22,12 @@ body {
     display: grid;
     grid-template-rows: repeat(var(--grid-size),var(--cell-size));
     grid-template-columns: repeat(var(--grid-size),var(--cell-size));
-    width: 960px;
-    height: 960px;
+    /* width: 960px;
+    height: 960px; */
+
+    /* use vmin to choose the smaller between width or height, keep it square */
+    width: 60vmin;
+    height: 60vmin;
     background-color: #CCC;
     gap: 0;
   

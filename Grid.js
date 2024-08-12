@@ -10,7 +10,11 @@ export default class Grid {
 
     createGrid() {
         //Calculate the size of each cell based on the grid size
-        const cellSize = 960 / this.gridSize;
+        // const cellSize = 960 / this.gridSize;
+
+        //get the smaller dimension of the viewport:
+        const containerSize = Math.min(window.innerWidth, window.innerHeight) * 0.6;
+        const cellSize = containerSize / this.gridSize;
         // const finalCellSize = cellSize - ((this.gridSize -1) / this.gridSize);
         this.gridElement.style.setProperty('--grid-size', this.gridSize);
         this.gridElement.style.setProperty('--cell-size', `${cellSize}px`);

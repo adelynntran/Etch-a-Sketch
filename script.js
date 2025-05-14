@@ -112,6 +112,14 @@ function addColorCircle() {
     newColor.style.borderRadius = '100%';
     newColor.style.backgroundColor = hexColor;
 
+    newColor.addEventListener('click', () => {
+        selectedColor = hexColor;
+        currentGrid.setColor(selectedColor);
+        console.log(`Choosen custom color: ${selectedColor}`);
+    });
+
+    defaultColor.appendChild(newColor);
+
     console.log(`Color ${hexInput.value} is saved.`);
 
 }

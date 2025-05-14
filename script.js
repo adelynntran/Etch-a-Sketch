@@ -19,12 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentGrid = new Grid(sketchContainer, 16);
     let selectedColor = 'white';
 
-    //size selection
+    //size selection (via clicking button)
     sizeButton.addEventListener('click', () => {
         const gridSize = parseInt(sizeInput.value, 10) || 16; //if input invalid, size changes to 16
         currentGrid = new Grid(sketchContainer, gridSize);
         currentGrid.setColor(selectedColor);
         console.log(`Size ${gridSize} is choosen.`)
+    });
+
+    //size selection (via enter button)
+    sizeInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            sizeButton.click(); // simulate click
+        }
     });
 
     
